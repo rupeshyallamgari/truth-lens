@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Truth Lens</title>
+  <link rel="stylesheet" href="sidepanel.css">
+  <style>
+    .lang-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .lang-dropdown {
+      background: #0f172a;
+      color: #38bdf8;
+      border: 1px solid #334155;
+      font-size: 11px;
+      font-weight: bold;
+      border-radius: 6px;
+      padding: 4px 8px;
+      outline: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <div class="logo">🔎 Truth Lens</div>
+      <select id="ext-lang" class="lang-dropdown" title="Change Language">
+        <option value="en">English (India)</option>
+        <option value="hi">हिंदी (Hindi)</option>
+        <option value="bn">বাংলা (Bengali)</option>
+        <option value="te">తెలుగు (Telugu)</option>
+        <option value="mr">मराठी (Marathi)</option>
+        <option value="ta">தமிழ் (Tamil)</option>
+        <option value="gu">ગુજરાતી (Gujarati)</option>
+        <option value="kn">ಕನ್ನಡ (Kannada)</option>
+        <option value="ml">മലയാളം (Malayalam)</option>
+        <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
+        <option value="or">ଓଡ଼ିଆ (Odia)</option>
+      </select>
+    </div>
+    <div class="tagline" id="ext-tagline">Check the claim. See the evidence.</div>
+  </header>
+  <main>
+    <section class="card">
+      <label id="ext-label-input">Article / claim</label>
+      <textarea id="input" placeholder="Click Read this page or paste a claim here..."></textarea>
+      <div class="row">
+        <button id="readPage" class="secondary">Read this page</button>
+        <button id="verify" class="primary">Verify</button>
+      </div>
+    </section>
+    <div id="status" class="status hidden"></div>
+    <section id="result" class="card hidden"></section>
+  </main>
+  <footer id="ext-footer">AI-assisted verification. Results are not absolute proof of truth or falsehood.</footer>
+  <script src="sidepanel.js"></script>
+</body>
+</html>
